@@ -447,7 +447,7 @@ FEATURES
   display: flex;
 }
 
-.movie:hover .movie__img {
+.movie__img:hover {
   transform: scale(1.03);
 }
 
