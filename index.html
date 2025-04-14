@@ -2,33 +2,109 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Movie Database Search</title>
+    <script src="https://kit.fontawesome.com/2ba0b949d0.js" crossorigin="anonymous"></script>	<title>Movie Database Search</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	
-	
-	<div class="container">
-		<div class="row mt-3 justify-content-center">
-			<div class="col-md-8">
-				<h1 class="text-center">Search Movie or Series</h1>
-				<div class="input-group mb-3">
+
+
+<body id="movies__body">
+  <section>
+    <nav>
+      <div class="nav__container">
+        <img class="logo" src="assets/BS_BOLD-textLogo.png" alt="">
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Link</a></li>
+          <li><a href="#" class="nav__link">Link</a></li>
+          <li><a href="#" class="nav__link nav__link--primary">Active</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop" style="visibility: hidden;">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#features" class="menu__link" onclick="closeMenu()">Travel</a>
+            </li>
+            <li class="menu__list">
+              <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <main id="movies__main">
+    <section id="header" class="overlay">
+      <div class="container">
+        <div class="row__main--title">
+          <h2 class="section__title movies__header--title">
+            BROWSE MOVIES
+          </h2>
+          <!-- <select id="filter" onchange="filterMovies(event)">
+            <option value="" disabled selected>Sort</option>
+            <option value="LOW_TO_HIGH">Year, Older to Newer</option>
+            <option value="HIGH_TO_LOW">Year, Newer to Older</option>
+            <option value="RATING">Type</option>
+          </select> -->
+        </div>
+        <div class="content__wrapper">
+          <div class="input__wrapper">
+            <div class="search__bar">
+                <input type="text" id="search-input" class="form-control" placeholder="Search title or keyword">
+                <div id="results-container"></div>
+                    <div class="search__wrapper">
+                    <div class="search__icon">
+                        <button class="submit btn" id="search-button">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+				<!-- 
+                  
+                <div class="content__wrapper">
+          <div class="input__wrapper">
+            <div class="search__bar">
+              <input type="text" id="search-input" placeholder="Search...">
+              <div id="results-container"></div>
+              <button class="submit">
+                <div class="search__icon fa fa-search"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+                
+                <div class="movie__input">
 					<input type="text" id="search-input" class="form-control" placeholder="Search by title">
-					<div class="input-group-append">
-						<button class="btn btn-outline-secondary" type="button" id="search-button">Search!</button>
+					<div class="movie__input--button">
+						<button class="btn" type="button" id="search-button">Search!</button>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
 		<hr>
-
-		<div class="row" id="list-movie">
-
+    </div>
+        <div class="movie__container">
+		<div class="movie" id="list-movie">
 		</div>
-
-	</div>
-
+        </div>
+</div>
 	<script src="main.js"></script>
+	<script src="movies.js"></script>
+	<script src="index.js"></script>
 </body>
 </html>
